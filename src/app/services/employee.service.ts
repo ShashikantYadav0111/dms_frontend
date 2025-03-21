@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmployeeService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  private api = "https://localhost:8080/api/employees/get";
 }

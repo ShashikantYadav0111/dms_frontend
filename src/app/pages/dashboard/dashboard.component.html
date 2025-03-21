@@ -1,27 +1,18 @@
-<div class="main-container w-screen h-screen bg-green-200 flex flex-row p-10">
-    <div class="sidebar w-1/5 h-full bg-red-200 flex-row border items-center p-2">
-      <div
-        class="btn p-1 text-lg sidebar-btn w-full h-10 border-2 text-center rounded-md"
-        (click)="setEmployee()"
-      >
-        Employee
-      </div>
-      <div
-        class="btn p-1 text-lg sidebar-btn w-full h-10 border-2 text-center rounded-md"
-        (click)="onClick()"
-      >
-        Customer
-      </div>
-      <div
-        class="btn p-1 text-lg sidebar-btn w-full h-10 border-2 text-center rounded-md"
-        (click)="setInventory()"
-      >
-        Inventory
-      </div>
+<div class="main-container">
+  <div class="sidebar">
+    <div id="admin-panel">ADMIN PANEL</div>
+    <div class="nav-buttons">
+      <div class="btn" (click)="setEmployee()">Employee</div>
+      <div class="btn" (click)="onClick()">Customer</div>
+      <div class="btn" (click)="setInventory()">Inventory</div>
     </div>
-    <div class="display-area w-4/5 h-full bg-blue-200">
-      <app-customer [customers]="customers"  *ngIf="isCustomerSelected"></app-customer>
-      <app-employee *ngIf="isEmployeeSelected"></app-employee>
-      <app-inventory *ngIf="isInventorySelected"></app-inventory>
-    </div>
+  </div>
+  <div class="display-area">
+    <app-customer
+      [customers]="customers"
+      *ngIf="isCustomerSelected"
+    ></app-customer>
+    <app-employee *ngIf="isEmployeeSelected"></app-employee>
+    <app-inventory *ngIf="isInventorySelected"></app-inventory>
+  </div>
 </div>

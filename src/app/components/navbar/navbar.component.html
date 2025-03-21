@@ -1,0 +1,28 @@
+<div class="main-container">
+    <div class="web-view">
+        <div class="logo">
+            Logo
+        </div>
+        <div class="routes">
+            <ul>
+                <li>Home</li>
+                <li>User</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-view">
+        <div class="logo">
+            Logo
+        </div>
+        <div class="burger" (click)="toggleMenu()">
+        <div *ngIf="showMenu" class="mobile-routes">
+            <ul>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+                <li>Project</li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>

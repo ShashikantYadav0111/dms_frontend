@@ -26,7 +26,7 @@ interface Customer {
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent{
-  customers: Customer[] = [];
+  customers: Customer[]=[];
   isCustomerSelected = true;
   isEmployeeSelected = false;
   isInventorySelected = false;
@@ -37,9 +37,8 @@ export class DashboardComponent{
     this.isCustomerSelected = true;
     this.isEmployeeSelected = false;
     this.isInventorySelected = false;
-    this.customerService.getUsers().subscribe((data:any) => {
+    this.customerService.getUsers().then((data)=>{
       this.customers = data;
-      console.log(this.customers)
     });
   }
 

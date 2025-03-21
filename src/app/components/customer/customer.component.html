@@ -1,11 +1,12 @@
-<div class="main-container border-2 border-red-300 w-full ">
-    <div class="font-2 bg-red-200 h-10 items-center"><span class="text-lg">Customer Panel</span></div>
-    <div class="customer-list w-full !h-full bg-green-200">
+<div class="main-container">
+    <div class="panel-title"><span >Customer Panel</span></div>
+    <div class="customer-list">
         <div *ngFor="let customer of customers" class="customer-item ">
             <div class="customer-details">
-                <span>{{customer.firstName}} {{customer.lastName}}</span>
-                <span>{{customer.phoneNo}}</span>
-                <span>{{customer.address}}</span>
+                
+                <div class="separate"><span>Name :</span><span> {{customer.firstName}} {{customer.lastName}}</span></div>
+                <div class="separate"><span>Phone:</span><span>{{customer.phoneNo}}</span></div>
+                <div class="separate"><span>Address:</span><span>{{customer.phoneNo}}</span></div>
             </div>
             <div class="button-section">
                 <div class="btn">Edit</div>

@@ -1,10 +1,10 @@
-<div class="main-container border-2 border-red-300 w-full ">
-    <div class="font-2 bg-red-200 h-10 items-center"><span class="text-lg">item Panel</span></div>
-    <div class="item-list w-full !h-full bg-green-200">
-        <div class="item-item ">
+<div class="main-container">
+    <div class="panel-title"><span >Inventory Panel</span></div>
+    <div class="item-list">
+        <div class="item-item">
             <div class="item-details">
-                <span>{{item.itemName}} </span>
-                <span>{{item.itemQty}}</span>
+                <div class="separate"><span >Item Name:</span><span>{{item.itemName}}</span></div>
+                <div class="separate"><span >Item Quantity :</span><span>{{item.itemQty}}</span></div>
             </div>
             <div class="button-section">
                 <div class="btn">Edit</div>

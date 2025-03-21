@@ -1,18 +1,24 @@
+
 .customer-item{
     display: flex;
+    border: 5px solid var(--primary-color);
     flex-direction: row;
     justify-content:space-between ;
     height: fit-content;
     box-sizing: border-box;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    
 }
 .customer-details{
     display: flex;
     flex-direction: column;
     margin: 0.2rem;
-    border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 2px 2px;
+    font-size: larger;
+    font-weight: bolder;
 
 }
 
@@ -21,15 +27,32 @@
     margin: 0.2rem;
 }
 .btn{
-    border: 1px solid black;
+    border: 2px solid var(--primary-color);
     margin: 3px 0;
     width: 100px;
+    background-color: var(--primary-color);
     text-align: center;
     border-radius: 5px;
+    font-weight: bolder;
     cursor: pointer;
+    color: azure;
+
+}
+.panel-title {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 1rem;
 
 }
 
 .btn:hover{
     transform: scale(1.1);
+}
+
+.separate{
+    width: 20rem;
+}
+.separate span{
+    width: 7rem;
+    margin-left: 4rem;
 }

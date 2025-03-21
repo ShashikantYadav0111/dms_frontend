@@ -1,1 +1,6 @@
-<app-dashboard></app-dashboard>
+<app-login *ngIf="!isLoggedin" (login)="setLogStatus($event)"></app-login>
+
+<div *ngIf="isLoggedin" class="app-main-container">
+  <app-navbar></app-navbar>
+  <app-dashboard></app-dashboard>
+</div>

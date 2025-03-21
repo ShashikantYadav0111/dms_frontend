@@ -1,14 +1,53 @@
+
 .main-container{
     box-sizing: border-box;
-    // padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 85vh;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: 5px 5px var(--primary-color);
+    padding: 1rem;
 }
 
-.sidebar-btn{
+
+.sidebar{
+    // border:1px solid black;
+}
+
+#admin-panel{
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center; 
+    color: var(--primary-color); 
+}
+
+.nav-buttons{
+    display: flex;
+    flex-direction: row;
+    // border: 1px solid black;
+    justify-content: space-around;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.btn{
     margin-bottom: 10px;
     cursor: pointer;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    height: 2.5rem;
+    width: 33%;
+    border-radius:10px ;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    line-height: 2.5rem;
 
 }
-.sidebar-btn:hover{
+.btn:hover{
     transform: scale(1.05);
+    border: 2px solid black;
 
 }

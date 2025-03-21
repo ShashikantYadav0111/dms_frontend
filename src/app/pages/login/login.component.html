@@ -1,0 +1,10 @@
+<div class="login-title">Enterprise Management System</div>
+<div class="login-container">
+    <div class="login-form" (submit)="handleLogin()">
+        <form [formGroup]="loginForm" class="form-container">
+            <input type="text" name="username" formControlName="username" placeholder="Username is user">
+            <input type="text" name="password" formControlName="password" placeholder="Password is password">
+            <button class="btn">Login</button>
+        </form>
+    </div>
+</div>

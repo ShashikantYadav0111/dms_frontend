@@ -1,10 +1,10 @@
-<div class="main-container border-2 border-red-300 w-full ">
-    <div class="font-2 bg-red-200 h-10 items-center"><span class="text-lg">Employee Panel</span></div>
-    <div class="employee-list w-full !h-full bg-green-200">
-        <div class="employee-item ">
+<div class="main-container">
+    <div class="panel-title"><span >Employee Panel</span></div>
+    <div class="employee-list">
+        <div class="employee-item">
             <div class="employee-details">
-                <span>{{employee.firstName}} {{employee.lastName}}</span>
-                <span>{{employee.phoneNo}}</span>
+                <div class="separate"><span>Name :</span><span> {{employee.firstName}} {{employee.lastName}}</span></div>
+                <div class="separate"><span>Phone:</span><span>{{employee.phoneNo}}</span></div>
             </div>
             <div class="button-section">
                 <div class="btn">Edit</div>
