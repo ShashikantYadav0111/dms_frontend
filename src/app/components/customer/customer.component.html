@@ -1,5 +1,6 @@
 <div class="main-container">
     <div class="panel-title"><span >Customer Panel</span></div>
+    <button (click)="addCustomer()">add customer</button>
     <div class="customer-list">
         <div *ngFor="let customer of customers" class="customer-item ">
             <div class="customer-details">

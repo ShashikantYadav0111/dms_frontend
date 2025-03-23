@@ -1,10 +1,25 @@
 <div class="login-title">Enterprise Management System</div>
 <div class="login-container">
+    <div class="login-icon">
+        <img src="/assets/login_icon.png" alt="login"/>
+    </div>
     <div class="login-form" (submit)="handleLogin()">
         <form [formGroup]="loginForm" class="form-container">
-            <input type="text" name="username" formControlName="username" placeholder="Username is user">
-            <input type="text" name="password" formControlName="password" placeholder="Password is password">
+            <div class="input-container">
+                <div class="logo-cont">
+                    <img src="/assets/username.png" alt="login"/>
+                </div>
+
+                <input type="text" name="username" formControlName="username" placeholder="Enter Username">
+            </div>
+            <div class="input-container">
+                <div class="logo-cont">
+                <img src="/assets/password.png" alt="login"/>
+                </div>
+                <input type="password" name="password" formControlName="password" placeholder="Enter Password">
+            </div>
             <button class="btn">Login</button>
+            Dont't have an account?register
         </form>
     </div>
 </div>

@@ -3,7 +3,6 @@ import { CustomerService } from '../../services/customer.service';
 import { CommonModule } from '@angular/common';
 
 interface Customer {
-  id: number;
   firstName: string;
   lastName: string;
   address: string;
@@ -19,5 +18,9 @@ interface Customer {
 export class CustomerComponent {
   @Input()customers: Customer[] = [];
   // customerService = Inject(CustomerService)
+  constructor(private customerService:CustomerService){}
 
+  addCustomer(){
+    this.customerService.postUser({firstName:"shashikant",lastName:"yadav",address:"abc321",phoneNo:"9876543210"})
+  }
 }

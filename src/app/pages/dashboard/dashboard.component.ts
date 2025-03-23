@@ -1,18 +1,12 @@
-import { Component, inject, Inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CustomerComponent } from '../../components/customer/customer.component';
 import { EmployeeComponent } from '../../components/employee/employee.component';
 import { InventoryComponent } from '../../components/inventory/inventory.component';
 
 import { CustomerService } from '../../services/customer.service';
 import { CommonModule } from '@angular/common';
+import { Customer } from '../../model/customer';
 
-interface Customer {
-  id: number;
-  firstName: string;
-  lastName: string;
-  address: string;
-  phoneNo: string;
-}
 
 @Component({
   selector: 'app-dashboard',
@@ -25,13 +19,17 @@ interface Customer {
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent{
+export class DashboardComponent  {
+ 
+  
   customers: Customer[]=[];
   isCustomerSelected = true;
   isEmployeeSelected = false;
   isInventorySelected = false;
 
   customerService = inject(CustomerService)
+
+  
 
   onClick() {
     this.isCustomerSelected = true;

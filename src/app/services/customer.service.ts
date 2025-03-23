@@ -1,11 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import axios from 'axios';
 import axiosInstance from './axios.instance';
 
 interface Customer {
-  id: number;
   firstName: string;
   lastName: string;
   address: string;
@@ -19,16 +16,27 @@ interface Customer {
 
 export class CustomerService {
   
-  private apiUrl = 'http://localhost:8080/api/customers/get-customer'; // Change to your backend URL
+  private apiUrl = 'http://localhost:8080/api/customers/'; // Change to your backend URL
 
   async getUsers() {
     try {
-      const response = await axiosInstance.get(this.apiUrl);
+      const response = await axiosInstance.get(this.apiUrl+"get-customer");
       console.log('Users:', response.data);
-      let customers:Customer[] = [];
       return response.data;
     } catch (error) {
       console.error('Authorization Failed:', error);
     }
   }
+
+  async postUser(customer:Customer){
+    try{
+      const response = await axiosInstance.post(this.apiUrl+"add-customer",customer)
+      console.log(response);
+    }catch(error){
+      console.error(error);
+    }
+  }
+
+  
+
 }
